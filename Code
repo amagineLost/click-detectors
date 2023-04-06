@@ -1,0 +1,18 @@
+-- Get all objects in the workspace
+
+local objects = workspace:GetDescendants()
+
+-- Iterate through each object and fire its ClickDetector if it has one
+
+for _, object in ipairs(objects) do
+
+    local clickDetector = object:FindFirstChildOfClass("ClickDetector")
+
+    if clickDetector then
+
+        clickDetector:Fire()
+
+    end
+
+end
+
